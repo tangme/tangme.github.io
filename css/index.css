@@ -3,26 +3,26 @@ body{
     background:#fff url(../images/bg6.png);
 }
 .self-info-p{
-    width: 206px;
+    width: 90%;
     background-color: #eee;
-    margin:6px 0 6px 1em;
+    margin:6px auto;
     padding: 2px;
     text-indent: 1px;
     border-bottom:1px dashed #ccc;
 }
 .work-study-p{
-    width: 210px;
+    width: 90%;
     background-color: #eee;
-    margin:7px 0 7px 1em;
+    margin:6px auto;
     padding: 2px;
     text-indent: 1px;
     border-bottom:1px dashed #ccc;
     font-size:13px;
 }
 .other-project-p{
-    width: 210px;
+    width: 90%;
     background-color: #eee;
-    margin:7px 0 7px 1em;
+    margin:7px auto;
     padding: 2px;
     text-indent: 1px;
     border-bottom:1px dashed #ccc;
@@ -146,10 +146,10 @@ body{
 }
 
 .my-hobby-p{
-    width: 185px;
+    width: 85%;
     text-indent: .5em;
     border-left: 3px solid #bbb;
-    margin-left: 1.6em;
+    margin: 10px auto;
     background-color: #eee;
     padding: 2px 0;
 }
@@ -558,6 +558,7 @@ body{
 }
 
 .cbp_tmtimeline>li .cbp_tmtime span:first-child {
+    width: 60px;
     font-size: 0.9em;
     color: #bdd0db;
 }
