@@ -139,7 +139,7 @@ body{
 
 .my-hobby-ul li {
     float: left;
-    display: inline-block;
+    display: block;
     width: 25%;
     margin: 10px 10px 0 5px;
     text-align: center;
@@ -287,7 +287,7 @@ body{
 }
 
 .progress-bar.active {
-    /*animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;*/
+    animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
 }
 
 @-webkit-keyframes animate-positive {
@@ -349,8 +349,8 @@ body{
     left: 50%;
     top: 0;
     z-index: -1;
-    transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 .timeline h2 {
     clear: both;
@@ -424,8 +424,8 @@ body{
     border-bottom: 10px dashed transparent;
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
 .timeline .left .angle {
     border-left: 10px solid #fff;
@@ -450,26 +450,26 @@ body{
 .timeline .left .angle:before {
     left: -4px;
     top: -4px;
-    transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .timeline .left .angle:after {
     left: -4px;
     top: -14px;
-    transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 .timeline .right .angle:before {
     right: -4px;
     top: -4px;
-    transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 .timeline .right .angle:after {
     right: -4px;
     top: -14px;
-    transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .timeline .event .knot {
     display: block;
@@ -479,8 +479,8 @@ body{
     border-radius: 3px;
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
 .timeline .left .knot {
     right: -50px;
@@ -498,8 +498,8 @@ body{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .timeline .title {
     clear: both;
@@ -594,8 +594,9 @@ body{
 }
 
 .cbp_tmtimeline>li .cbp_tmlabel h2 {
-    margin: 0px;
+    margin: 0;
     padding: 0 0 10px 0;
+    border-bottom: 1px solid #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .borderBottom{
@@ -712,6 +713,6 @@ body{
         position: relative;
         float: right;
         left: auto;
-        margin: -55px 5px 0 0px;
+        margin: -55px 5px 0 0;
     }
 }
