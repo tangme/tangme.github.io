@@ -16,34 +16,27 @@
     })(window);
     </script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/mobileIndex.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobileIndex.min.css">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery.sticky/1.0.4/jquery.sticky.js"></script>
-    <script src="./js/mobileIndex.js"></script>
-
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 clean-padding" style="position:fixed;">
-                <div class="top"></div>
+            <!-- 顶部头像 简介 选项卡 -->
+            <div class="topBG-div">
             </div>
-            <div class="col-xs-12 clean-padding common-div-style" style="margin-top:110px;height: 100px;box-shadow: inset 0px 6px 10px -6px black;">
-                <div style="margin: -50px auto;width:90%;position: relative;border-bottom: 1px dashed #ddd;
-    padding-bottom: 10px;">
-                    <img src="./images/avatar.jpg" class="img-responsive" style="border-radius: 50%;width: 100px;box-shadow: 0 0 20px 1px;">
-                    <p style="position: absolute;bottom:10px;left:120px;margin:0;">
-                        <label style="font-size: 2em;font-family: sans-serif,Microsoft YaHei,fantasy;font-weight: normal;">唐 律</label>
-                        <code style="color: #fff;background-color: #999;margin-left: 10px;">Web前端开发</code>
+            <div class="col-xs-12 clean-padding common-div-style portrait-out-div">
+                <div class="portrait-inner-div">
+                    <img src="./images/avatar.jpg" class="img-responsive">
+                    <p>
+                        <label>唐 律</label>
+                        <code>Web前端开发</code>
                     </p>
                 </div>
             </div>
-            <div class="col-xs-12 common-div-style" style="margin:-30px auto 0;">
+            <div class="col-xs-12 common-div-style selfBrief-div">
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         现主攻前端，五年开发经验，有大公司与小团队工作经历，以维护后台业务系统起手，后与团队将开发过程中遇到的各类业务问题 抽离重构为可复用的组件；轻微强迫症，注意代码规范
@@ -52,12 +45,12 @@
             </div>
             <div class="col-xs-12 clean-padding">
                 <div id="guideTab">
-                <hr style="margin:0;">
-                <p style="width: 50%;margin: 0 auto;text-align: center;color:#ddd;">
-                    <span style="display: inline-block;padding:.5em;margin: 0 .5em;" id="project-tab" class="selectedTab">项目经验</span>
-                    <span style="display: inline-block;padding:.5em;margin: 0 .5em;" id="selfinfo-tab">个人信息</span>
-                </p>
-                <hr style="margin:0;">
+                    <hr>
+                    <p>
+                        <span id="project-tab" class="selectedTab">项目经验</span>
+                        <span id="selfinfo-tab">个人信息</span>
+                    </p>
+                    <hr>
                 </div>
             </div>
             <!-- 项目经验 -->
@@ -102,7 +95,7 @@
                                 <code>Java1.5(SSH)||java7</code>
                                 <code>ORACLE</code>
                             </p>
-                            <div class="">
+                            <div>
                                 <div class="bs-callout bs-callout-info clearfix" id="callout-alerts-dismiss-plugin">
                                     <!-- <img src="./images/datangjituanweb.jpg" alt="" class="demoImg"> -->
                                     <h4>职责与成果</h4>
@@ -173,7 +166,7 @@
                         <p class="self-info-p common-p-style"><i class="fa fa-user "></i> 汉族</p>
                         <p class="self-info-p common-p-style"><i class="fa fa-location-arrow "></i> 湖南长沙</p>
                         <p class="self-info-p common-p-style"><i class="fa fa-language "></i> 汉语 英语 长沙方言</p>
-                        <p class="self-info-p common-p-style"><i class="fa fa-phone-square "></i> 18684942382</p>
+                        <p class="self-info-p common-p-style"><i class="fa fa-phone-square "></i> 186****2382</p>
                         <p class="self-info-p common-p-style"><i class="fa fa-envelope "></i> tangchaofalv@163.com</p>
                         <p class="self-info-p common-p-style"><i class="fa fa-github "></i> https://tangme.github.io</p>
                     </div>
@@ -313,5 +306,9 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.sticky/1.0.4/jquery.sticky.js"></script>
+<script src="./js/mobileIndex.js"></script>
 
 </html>

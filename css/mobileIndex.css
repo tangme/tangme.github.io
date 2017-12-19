@@ -1,14 +1,81 @@
 body {
-    background: #fff url(../images/bg6.png);
+    background: #2b5876;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4e4376, #2b5876);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4e4376, #2b5876);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.portrait-out-div {
+    margin-top: 110px;
+    height: 100px;
+    box-shadow: inset 0 6px 10px -6px black;
+}
+
+.portrait-inner-div {
+    margin: -50px auto;
+    width: 90%;
+    position: relative;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+.portrait-inner-div>img {
+    border-radius: 50%;
+    width: 100px;
+    box-shadow: 0 0 20px 1px;
+}
+
+.portrait-inner-div>p {
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+    margin: 0;
+}
+
+.portrait-inner-div>p label {
+    font-size: 2em;
+    font-family: sans-serif, Microsoft YaHei, fantasy;
+    font-weight: normal;
+}
+
+.portrait-inner-div>p code {
+    color: #fff;
+    background-color: #999;
+    margin-left: 10px;
+}
+
+.selfBrief-div {
+    margin: -30px auto 0;
 }
 
 #guideTab {
-background: #00d2ff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    padding:1px 0;
+    background: #00d2ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #3a7bd5, #00d2ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #3a7bd5, #00d2ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1px 0;
     box-shadow: 0 1px 5px 0 #555;
+}
+
+#guideTab hr {
+    margin: 0;
+}
+
+#guideTab p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ddd;
+}
+
+#guideTab p span {
+    display: inline-block;
+    padding: .5em;
+    margin: 0 .5em;
 }
 
 .selectedTab {
@@ -29,9 +96,11 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
     padding: 0;
 }
 
-.top {
+.topBG-div {
+    position: fixed;
+    width: 100%;
     height: 110px;
-    background: skyblue url(../images/Cosmos03.jpg) no-repeat;
+    background: url(../images/Cosmos03.jpg) no-repeat;
     background-size: cover;
     opacity: .9;
     box-shadow: 0 0 40px 1px;
@@ -213,6 +282,7 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
 
 
 
+
 /* ================================================================================== */
 
 
@@ -221,7 +291,8 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
 
 /* ================================================================================== */
 
-@font-face {
+
+/*@font-face {
     font-family: 'ecoico';
     src: url('../fonts/timelineicons/ecoico.eot');
     src: url('../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
@@ -230,7 +301,7 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
     url('../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 
 /* Made with http://icomoon.io/ */
@@ -241,6 +312,8 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
     list-style: none;
     position: relative;
 }
+
+
 
 
 /* The line */
@@ -286,6 +359,12 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
 }
 
 
+
+
+
+
+
+
 /* Right content */
 
 .cbp_tmtimeline>li .cbp_tmlabel {
@@ -305,11 +384,18 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
 }
 
 .cbp_tmtimeline>li .cbp_tmlabel h2 {
-    margin-top: 0px;
+    margin-top: 0;
     padding: 0 0 10px 0;
     font-size: 1.5em;
+    border-bottom: 1px solid #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+
+
+
+
+
 
 
 /* The triangle */
@@ -330,6 +416,12 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
 .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
     border-right-color: #6cbfee;
 }
+
+
+
+
+
+
 
 
 /* The icons */
@@ -358,20 +450,30 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
 }
 
 .cbp_tmicon-phone:before {
-    content: "\e000";
+    font-family: 'FontAwesome';
+    content: "\f073";
 }
 
 .cbp_tmicon-screen:before {
-    content: "\e001";
+    font-family: 'FontAwesome';
+    content: "\f097";
 }
 
 .cbp_tmicon-mail:before {
-    content: "\e002";
+    font-family: 'FontAwesome';
+    content: "\f097";
 }
 
 .cbp_tmicon-earth:before {
-    content: "\e003";
+    font-family: 'FontAwesome';
+    content: "\f097";
 }
+
+
+
+
+
+
 
 
 /* Example Media Queries */
@@ -422,6 +524,6 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
         position: relative;
         float: right;
         left: auto;
-        margin: -55px 5px 0 0px;
+        margin: -55px 5px 0 0;
     }
 }

@@ -1,1 +1,5 @@
 /node_modules/*
+.csslintrc
+server.js
+mine.js
+gulpfile.js

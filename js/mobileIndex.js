@@ -35,6 +35,8 @@ $(document).ready(function() {
         if (!$(this).hasClass("selectedTab")) {
             $(this).addClass("selectedTab");
             PageObj.$selfinfoTab.removeClass("selectedTab");
+            PageObj.$selfinfoMainDiv.stop(true,true);
+            PageObj.$projectMainDiv.stop(true,true);
             PageObj.$selfinfoMainDiv.animateCss("fadeOutRight", function() {
                 PageObj.$selfinfoMainDiv.css("display", "none");
                 PageObj.$projectMainDiv.css("display", "block");
@@ -47,6 +49,8 @@ $(document).ready(function() {
         if (!$(this).hasClass("selectedTab")) {
             $(this).addClass("selectedTab");
             PageObj.$projectTab.removeClass("selectedTab");
+            PageObj.$selfinfoMainDiv.stop(true,true);
+            PageObj.$projectMainDiv.stop(true,true);
             PageObj.$projectMainDiv.animateCss("fadeOutLeft", function() {
                 PageObj.$projectMainDiv.css("display", "none");
                 PageObj.$selfinfoMainDiv.css("display", "block");
