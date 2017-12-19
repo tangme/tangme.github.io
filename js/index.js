@@ -3,4 +3,6 @@ $(document).ready(function(){
 		$(".tabContent").css("display","none");
 		$("."+$(this).data("tab")).fadeIn("slow");
 	});
+
+	new WOW().init();
 });

@@ -63,4 +63,5 @@ $(document).ready(function() {
             topSpacing: 0,
             zIndex:9
     });
+    new WOW().init();
 });
