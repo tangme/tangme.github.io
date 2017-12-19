@@ -39,8 +39,7 @@ $(document).ready(function() {
             PageObj.$projectMainDiv.stop(true,true);
             PageObj.$selfinfoMainDiv.animateCss("fadeOutRight", function() {
                 PageObj.$selfinfoMainDiv.css("display", "none");
-                PageObj.$projectMainDiv.css("display", "block");
-                PageObj.$projectMainDiv.animateCss("fadeInLeft");
+                PageObj.$projectMainDiv.fadeIn("slow");
             });
         }
 
@@ -53,8 +52,7 @@ $(document).ready(function() {
             PageObj.$projectMainDiv.stop(true,true);
             PageObj.$projectMainDiv.animateCss("fadeOutLeft", function() {
                 PageObj.$projectMainDiv.css("display", "none");
-                PageObj.$selfinfoMainDiv.css("display", "block");
-                PageObj.$selfinfoMainDiv.animateCss("fadeInRight");
+                PageObj.$selfinfoMainDiv.fadeIn("slow");
             });
         }
 
