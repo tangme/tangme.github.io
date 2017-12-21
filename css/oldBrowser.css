@@ -17,9 +17,6 @@
 .left-card-info-header {
     border:1px solid #777;
 }
-/*
-.left-card-info-body {
-    padding: 10px 0;
-    border:1px solid #ccc;
-    border-top:0;
-}*/
+.my-hobby-ul>li>img{
+	width: 32px;
+}
