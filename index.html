@@ -8,20 +8,41 @@
     <title>唐小律</title>
     <link rel="Shortcut Icon" href="./images/favicon.ico">
     <script src="https://cdn.bootcss.com/device.js/0.2.7/device.min.js"></script>
+    <!--[if lte IE 9]>
+        <script type="text/javascript">
+        var OLD_IE = true;
+        </script>
+    <![endif]-->
     <script type="text/javascript">
     (function(window) {
         if (!device.desktop()) {
             window.location.href = "mobileIndex.html";
         }
+
+        function Tools() {
+            this.isOldIE = (typeof window.OLD_IE !== 'undefined') ? true : false;
+        }
+
+        window.Tools = new Tools();
+
+        if (window.Tools.isOldIE) {
+            document.write("<script src=\"https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js\"><\/script>");
+        } else {
+            document.write("<script src=\"https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js\"><\/script>");
+            document.write("<script src=\"https://cdn.bootcss.com/wow/1.1.2/wow.min.js\"><\/script>");
+            
+        }
+
     })(window);
     </script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/index.min.css">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <style type="text/css">.container,.container-fluid{width: 100% !important;min-width: 1200px !important;}</style>
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" type="text/css" href="./css/oldBrowser.min.css">
+    <![endif]-->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body class="commonBG">
@@ -123,26 +144,25 @@
                     </div>
                     <div class="left-card-info pull-left zoomIn wow">
                         <h4 class="left-card-info-header">兴趣爱好</h4>
-                        <ul class="my-hobby-ul clearfix" >
-                            <li><img src="./images/hiking.svg" alt="">
+                        <ul class="my-hobby-ul clearfix">
+                            <li><img src="" alt="徒步" data-imgsrcname="hiking">
                                 <p>徒步</p>
                             </li>
-                            <li><img src="./images/bick.svg" alt="">
+                            <li><img src="" alt="骑行" data-imgsrcname="bick">
                                 <p>骑行</p>
                             </li>
-                            <li><img src="./images/badmintom.svg" alt="">
+                            <li><img src="" alt="羽毛球" data-imgsrcname="badmintom">
                                 <p>羽毛球</p>
                             </li>
-                            <li><img src="./images/dc.svg" alt="">
+                            <li><img src="" alt="摄影" data-imgsrcname="dc">
                                 <p>摄影</p>
                             </li>
-                            <li><img src="./images/phone.svg" alt="">
+                            <li><img src="" alt="数码" data-imgsrcname="phone">
                                 <p>数码</p>
                             </li>
-                            <li><img src="./images/reading.svg" alt="">
+                            <li><img src="" alt="阅读" data-imgsrcname="reading">
                                 <p>阅读</p>
                             </li>
-
                         </ul>
                         <p class="my-hobby-p">14年骑行川藏(318)线</p>
                         <p class="my-hobby-p">17年徒步安纳普尔那环线</p>
@@ -164,8 +184,8 @@
                             <p class="other-project-p"><i class="fa fa-angle-right"></i> <a href="http://www.cdt-yn.com/" target="_blank">大唐云南发电有限公司网站</a> </p>
                             <p class="other-project-p"><i class="fa fa-angle-right"></i> 大唐云南分公司业绩考核系统</p>
                             <p class="other-project-p"><i class="fa fa-angle-right"></i> 湖南华电长沙发电有限公司网站</p>
-                            <p class="other-project-p"><i class="fa fa-angle-right"></i>  <a href="http://www.china-cdto.com" target="_blank">大唐集团海外投资有限公司网站</a></p>
-                            <p class="other-project-p"><i class="fa fa-angle-right"></i>  <a href="http://www.cdt-my.com/" target="_blank">大唐集团煤业有限公司网站</a></p>
+                            <p class="other-project-p"><i class="fa fa-angle-right"></i> <a href="http://www.china-cdto.com" target="_blank">大唐集团海外投资有限公司网站</a></p>
+                            <p class="other-project-p"><i class="fa fa-angle-right"></i> <a href="http://www.cdt-my.com/" target="_blank">大唐集团煤业有限公司网站</a></p>
                             <p class="other-project-p"><i class="fa fa-angle-right"></i> 湖南华电常德发电有限公司网站</p>
                             <p class="other-project-p"><i class="fa fa-angle-right"></i> 耒阳电厂在线考试系统</p>
                         </div>
@@ -250,7 +270,7 @@
                                         </p>
                                         <p>设计编写 页面配置模版，实现导航菜单、页面背景、列表样式、底部信息等组件，供用户自行设置，显著降低了网站的维护成本。</p>
                                         <p>重新设计与编写静态页面目录生成规则，解决服务器因单个目录里文件数量过多，而导致的响应缓慢问题。</p>
-                                        <p>参与设计与制定 网页专题、投票模块的功能和排版，协同制定开发标准，使其后类似功能得以流程化、复用性强。</p>   
+                                        <p>参与设计与制定 网页专题、投票模块的功能和排版，协同制定开发标准，使其后类似功能得以流程化、复用性强。</p>
                                         <p>完善特殊字符过滤规则，有效防范XSS攻击，SQL注入。</p>
                                     </div>
                                     <ul class="work-info">
@@ -310,7 +330,5 @@
         </p>
     </div>
 </body>
-<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 <script type="text/javascript" src="./js/index.min.js"></script>
-
 </html>

@@ -1,3 +1,9 @@
+.container,
+.container-fluid {
+    width: 100% !important;
+    min-width: 1200px !important;
+}
+
 body {
     background: #333;
 }
@@ -109,9 +115,10 @@ body {
     box-shadow: 0 0 40px 1px;
 }
 
-.commonBG{
+.commonBG {
     background: #333 url(../images/bg6.png);
 }
+
 .mainOutDiv {
     position: relative;
     margin-top: 110px;
@@ -126,6 +133,7 @@ body {
     text-indent: 10px;
     box-shadow: 0 4px 10px 1px #ccc;
 }
+
 
 
 /*.left-card-info:hover {
@@ -250,6 +258,7 @@ body {
 }
 
 
+
 /* --- progress bar ---  start --- */
 
 .progress-div {
@@ -341,6 +350,7 @@ body {
 
 
 
+
 /* --- progress bar ---  end --- */
 
 
@@ -378,6 +388,7 @@ body {
 .panel-tab-ul li span i {
     transform: rotate(-45deg);
 }
+
 
 
 /*时间线*/
@@ -597,6 +608,7 @@ body {
 
 
 
+
 /* The line */
 
 .cbp_tmtimeline:before {
@@ -611,6 +623,7 @@ body {
     /*margin-left: -10px;*/
     margin-left: -67px;
 }
+
 
 
 
@@ -648,6 +661,7 @@ body {
 
 
 
+
 /* Right content */
 
 .cbp_tmtimeline>li .cbp_tmlabel {
@@ -681,6 +695,7 @@ body {
 
 
 
+
 /* The triangle */
 
 .cbp_tmtimeline>li .cbp_tmlabel:after {
@@ -699,6 +714,7 @@ body {
 .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
     border-right-color: #6cbfee;
 }
+
 
 
 
@@ -730,6 +746,7 @@ body {
     /*margin: 0 0 0 -25px;*/
     margin: 13px 0 0 -72px;
 }
+
 
 
 /*.cbp_tmicon-phone:before {
