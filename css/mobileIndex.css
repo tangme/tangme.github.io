@@ -1,7 +1,18 @@
 body {
     background: #333;
 }
+/* === 顶部背景图片 === */
+.topBG-div {
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    background: url(../images/Cosmos03.jpg) no-repeat;
+    background-size: cover;
+    opacity: .9;
+    box-shadow: 0 0 40px 1px;
+}
 
+/* === 头像部分 === */
 .portrait-out-div {
     margin-top: 110px;
     height: 100px;
@@ -45,6 +56,7 @@ body {
     margin: -30px auto 0;
 }
 
+/* === 项目信息||个人信息 选项卡 ===*/
 #guideTab {
     background: #00d2ff;
     /* fallback for old browsers */
@@ -91,15 +103,7 @@ body {
     padding: 0;
 }
 
-.topBG-div {
-    position: fixed;
-    width: 100%;
-    height: 110px;
-    background: url(../images/Cosmos03.jpg) no-repeat;
-    background-size: cover;
-    opacity: .9;
-    box-shadow: 0 0 40px 1px;
-}
+
 .copyright-p{
 	position: fixed;
 	top:110px;
