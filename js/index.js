@@ -4,17 +4,14 @@ $(document).ready(function() {
     	$("."+$(this).data("tab")).fadeIn("slow");
     });*/
 
-    /*页面初次显示动画*/
-    var imgsArray = $(".my-hobby-ul>li>img");
+    Tools.$imgsArray = $(".my-hobby-ul>li>img");
     if (!Tools.isOldIE) {
+         /*页面初次显示动画*/
         new WOW().init();
-        imgsArray.each(function() {
-            $(this).attr("src", "./images/" + $(this).data("imgsrcname") + ".svg");
-        });
-    } else {
-        imgsArray.each(function() {
-            $(this).attr("src", "./images/" + $(this).data("imgsrcname") + ".png");
-        });
+        /*加载兴趣爱好图片*/
+        Tools.loadingImgs(".svg");
+    } else { 
+        /*IE8 加载兴趣爱好图片*/
+        Tools.loadingImgs(".png");
     }
-
 });

@@ -21,7 +21,16 @@
 
         function Tools() {
             this.isOldIE = (typeof window.OLD_IE !== 'undefined') ? true : false;
+            this.$imgsArray;
         }
+        Tools.prototype = {
+            constructor : Tools,
+            loadingImgs : function(fileSuffixName){
+                this.$imgsArray.each(function() {
+                    $(this).attr("src", "./images/" + $(this).data("imgsrcname") + fileSuffixName);
+                });
+            }
+        };
 
         window.Tools = new Tools();
 
@@ -64,13 +73,19 @@
                     <div class="left-card-info pull-left zoomIn wow">
                         <h4 class="left-card-info-header">个人信息</h4>
                         <div class="left-card-info-body">
-                            <p class="self-info-p"><i class="fa fa-calendar "></i> 27周岁</p>
+                            <p class="self-info-p"><i class="fa fa-calendar "></i> 27 周岁</p>
                             <p class="self-info-p"><i class="fa fa-user "></i> 汉族</p>
-                            <p class="self-info-p"><i class="fa fa-location-arrow "></i> 湖南长沙</p>
+                            <p class="self-info-p"><i class="fa fa-location-arrow "></i> 湖南 长沙</p>
                             <p class="self-info-p"><i class="fa fa-language "></i> 汉语 英语 长沙方言</p>
                             <p class="self-info-p"><i class="fa fa-phone-square "></i> 186****2382</p>
-                            <p class="self-info-p"><i class="fa fa-envelope "></i> tangchaofalv@163.com</p>
-                            <p class="self-info-p"><i class="fa fa-github "></i> https://tangme.github.io</p>
+                            <p class="self-info-p">
+                                <i class="fa fa-envelope "></i> 
+                                <a href="mailto:tangchaofalv@163.com">tangchaofalv@163.com</a>
+                            </p>
+                            <p class="self-info-p">
+                                <i class="fa fa-github "></i> 
+                                <a href="https://tangme.github.io" target="_blank">github.com/tangme</a>
+                            </p>
                         </div>
                     </div>
                     <div class="left-card-info pull-left zoomIn wow">
@@ -164,8 +179,12 @@
                                 <p>阅读</p>
                             </li>
                         </ul>
-                        <p class="my-hobby-p">14年骑行川藏(318)线</p>
-                        <p class="my-hobby-p">17年徒步安纳普尔那环线</p>
+                        <p class="my-hobby-p">
+                            <a href="http://v.youku.com/v_show/id_XODExNjUxMjQ0.html" target="_blank">14年骑行川藏(318)线</a>
+                        </p>
+                        <p class="my-hobby-p">
+                            <a href="http://v.youku.com/v_show/id_XMjY5NzMyNDMzMg==.html" target="_blank">17年徒步安纳普尔那环线</a>
+                        </p>
                         <p class="my-hobby-p">喜爱白岩松的文字</p>
                         <p class="my-hobby-p">爱否科技的小铁粉</p>
                     </div>
