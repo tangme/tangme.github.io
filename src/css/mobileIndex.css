@@ -6,7 +6,8 @@ body {
     position: fixed;
     width: 100%;
     height: 110px;
-    background: url(../images/Cosmos03.jpg) no-repeat;
+    /*background: url(../images/Cosmos03.jpg) no-repeat;*/
+    background: url(http://r.photo.store.qq.com/psb?/V13fiZMP3zFynb/L5LVdtqXgNQU57ctSCl*1UjC3VSsduXimvr3GF9bEac!/r/dEIBAAAAAAAA) no-repeat;
     background-size: cover;
     opacity: .9;
     box-shadow: 0 0 40px 1px;
@@ -144,7 +145,8 @@ body {
 
 .common-p-style,
 .common-div-style {
-    background: #fff url(../images/bg6.png) fixed;
+    background: #fff url(http://r.photo.store.qq.com/psb?/V13fiZMP3zFynb/N6JvBCeQHSeq3rABR1uu10K3obx0015A5xpIcHZBwyE!/r/dGcBAAAAAAAA) fixed;
+    /*background: #fff url(../images/bg6.png) fixed;*/
 }
 
 .self-info-p {
