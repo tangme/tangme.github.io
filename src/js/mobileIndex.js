@@ -39,7 +39,7 @@ $(document).ready(function() {
             PageObj.$projectMainDiv.stop(true, true);
             PageObj.$selfinfoMainDiv.animateCss("fadeOutRight", function() {
                 PageObj.$selfinfoMainDiv.css("display", "none");
-                PageObj.$projectMainDiv.fadeIn("slow");
+                PageObj.$projectMainDiv.fadeIn("fast");
             });
         }
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
             PageObj.$projectMainDiv.stop(true, true);
             PageObj.$projectMainDiv.animateCss("fadeOutLeft", function() {
                 PageObj.$projectMainDiv.css("display", "none");
-                PageObj.$selfinfoMainDiv.fadeIn("slow");
+                PageObj.$selfinfoMainDiv.fadeIn("fast");
             });
         }
 
