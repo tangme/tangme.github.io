@@ -1,3 +1,22 @@
+let tmp = '';
+var projectApp = new Vue({
+    el:'#tmpApp',
+    created:function(){
+        console.log('i am here.');
+        $.getJSON("./js/datas.json", function(json){
+            console.log('====');
+            projectApp.projectDatas = json;
+            console.log(json);
+            tmp = json;
+        });
+    },
+    data:{
+        projectDatas:[]
+    }
+});
+
+console.log('lalalal');
+
 $(document).ready(function() {
     /*$(".panel-tab-ul li[data-tab]").click(function(){
     	$(".tabContent").css("display","none");

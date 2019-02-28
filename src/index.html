@@ -52,6 +52,7 @@
         <link rel="stylesheet" type="text/css" href="./css/oldBrowser.min.css">
     <![endif]-->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body class="commonBG">
@@ -245,7 +246,28 @@
                 <div class="main">
                     <hr class="split-line">
                     <!-- 工作经历 -->
-                    <ul class="cbp_tmtimeline workExp tabContent">
+                    <ul class="cbp_tmtimeline workExp tabContent" id="tmpApp">
+                        <li class="slideInRight wow" v-for="item in projectDatas">
+                            <time class="cbp_tmtime" datetime="2013-04-10 18:30">
+                                <span>{{item.projectLiftTime[1]}}</span> 
+                                <span>{{item.projectLiftTime[0]}}</span>
+                            </time>
+                            <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>{{item.projectName}}</h2>
+                                <p class="borderBottom">
+                                    <code v-for="technologyStack in item.technologyStack" class="marginRight5">{{technologyStack}}</code>
+                                </p>
+                                <div class="bs-callout bs-callout-info" id="callout-alerts-dismiss-plugin" v-if="item.dutyAndAchieve && item.dutyAndAchieve.length > 0">
+                                    <h4>职责与成果</h4>
+                                    <p v-for="dutyAndAchieve in item.dutyAndAchieve">{{dutyAndAchieve}}</p>
+                                </div>
+                                <ul class="work-info">
+                                    <li v-for="todos in item.todos">{{todos}}</li>
+                                </ul>
+                            </div>
+                        </li>
+    
                         <li class="slideInRight wow">
                             <time class="cbp_tmtime" datetime="2013-04-10 18:30">
                                 <span></span> 
@@ -348,7 +370,7 @@
                                 <div class="">
                                     <div class="bs-callout bs-callout-info clearfix" id="callout-alerts-dismiss-plugin">
                                         <a href="http://www.china-cdt.com/" target="_blank">
-                                        <img src="http://r.photo.store.qq.com/psb?/V13fiZMP3zFynb/za*CLwNhkZgG3Cs9Gj75XuJnN*w*HMvSZNeYPvy73qI!/r/dDEBAAAAAAAA" alt="" ="./images/datangjituanweb.jpg" alt="" class="demoImg">
+                                        <img src="http://r.photo.store.qq.com/psb?/V13fiZMP3zFynb/za*CLwNhkZgG3Cs9Gj75XuJnN*w*HMvSZNeYPvy73qI!/r/dDEBAAAAAAAA" alt="" class="demoImg">
                                         </a>
                                         <h4>职责与成果</h4>
                                         <p>
